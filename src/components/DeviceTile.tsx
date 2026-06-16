@@ -166,6 +166,20 @@ export function DeviceTile({ device, onToggle, onIntensityChange, onTemperatureC
             >
               {device.name}
             </Animated.Text>
+
+            <Animated.Text
+              style={{ color: textColor }}
+              className="text-sm mt-2"
+            >
+              Estado: {device.roofState === 'CLOSED' ? 'Cerrado' : 'Abierto'}
+            </Animated.Text>
+
+            <Animated.Text
+              style={{ color: textColor }}
+              className="text-sm mt-1"
+            >
+              Lluvia: {device.rainDetection ? 'Detectada' : 'No detectada'}
+            </Animated.Text>
           </View>
         )}
       </Animated.View>
